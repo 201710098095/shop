@@ -1,0 +1,23 @@
+html, body, #app{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1366px;
+}
+.el-breadcrumb{
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+.el-table{
+    margin-top:15px;
+    padding: 15px;
+}
+.el-pagination{
+    margin-top: 20px;
+    margin-left: 400px;
+}
+.el-cascader-panel{
+
+    height: 200px;
+
+}
