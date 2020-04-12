@@ -162,9 +162,8 @@ export default {
         },
         //每页数量改变
         handleSizeChange(newSize){
-            whis.queryInfo.pagesize = newSize
+            this.queryInfo.pagesize = newSize
             this.getList()
-
         },
         //页码改变
         handleCurrentChange(newPage){

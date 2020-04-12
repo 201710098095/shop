@@ -8,6 +8,8 @@ import Rights from '.././components/power/Rights.vue'
 import Roles from '.././components/power/Roles.vue'
 import Cate from '.././components/goods/Cate.vue'
 import Params from '.././components/goods/Params.vue'
+import GoodsList from '.././components/goods/List.vue'
+import Add from '.././components/goods/Add.vue'
 
 
 
@@ -16,6 +18,18 @@ import Params from '.././components/goods/Params.vue'
 import { Message } from 'element-ui'
 
 Vue.use(VueRouter)
+
+// 时间
+Vue.filter('dateFormat',function(originVal){
+ const dt = new Date(originVal)
+ const y = dt.getFullYear()
+ const m = (dt.getMonth()+1+'').padStart(2,'0')
+ const d = (dt.getDate()+'').padStart(2,'0')
+ const hh = (dt.getHours()+'').padStart(2,'0')
+ const mm = (dt.getMinutes()+'').padStart(2,'0')
+ const ss = (dt.getSeconds()+'').padStart(2,'0')
+ return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+})
 
 const routes = [
   { path: '/', redirect: '/login' },
@@ -27,10 +41,9 @@ const routes = [
     {path: '/roles',component:Roles},
     {path: '/categories',component:Cate},
     {path: '/params',component:Params},
-
-
-
-
+    {path: '/goods',component:GoodsList},
+    {path: '/goods/add',component:Add},
+  
   ] 
   }
 ]
