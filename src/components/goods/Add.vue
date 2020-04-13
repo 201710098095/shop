@@ -17,6 +17,7 @@
                 <el-step title="完成"></el-step>
             </el-steps>
 
+
             <!-- 标签栏 -->
             <el-form :model="addForm" :rules="addFormRules" ref="addFormRef" label-width="100px" label-position="top">
              <el-tabs v-model="activeIndex" :tab-position="'left'" style="margin-top:50px;" :before-leave='beforeTabLeave' @tab-click='tabClicked'>
